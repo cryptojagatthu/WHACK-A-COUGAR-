@@ -89,7 +89,7 @@ function selectTile() {
 
 function shareOnX() {
     const tweetText = `I have officially become a racoonist by scoring ${score} points in Whack-a-cougar! 🎯 Can you beat my score? send screenshot📸 in comments.Portal for becoming racoonist : `;
-    const gameURL = "https://example.com"; // Replace with your actual game URL
+    const gameURL = "https://cryptojagatthu.github.io/WHACK-A-COUGAR-"; // Replace with your actual game URL
     const twitterURL = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(gameURL)}`;
     window.open(twitterURL, "_blank");
 }
