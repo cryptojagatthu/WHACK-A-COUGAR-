@@ -3,10 +3,18 @@ let currPlantTile;
 let score = 0;
 let gameOver = false;
 
+
 window.onload = function () {
-    setGame();
+    document.getElementById("startButton").addEventListener("click", startGame);
 };
 
+function startGame() {
+    // Hide the Start button
+    document.getElementById("startButton").style.display = "none";
+
+    // Initialize the game
+    setGame();
+}
 function setGame() {
     // Set up the grid in HTML
     for (let i = 0; i < 9; i++) {
@@ -80,7 +88,7 @@ function selectTile() {
 }
 
 function shareOnX() {
-    const tweetText = `I have officially become a racoonist by scoring ${score} points in Whack-a-cougar! 🎯 Can you beat my score? send screenshot📸 in comments`;
+    const tweetText = `I have officially become a racoonist by scoring ${score} points in Whack-a-cougar! 🎯 Can you beat my score? send screenshot📸 in comments.Portal for becoming racoonist : `;
     const gameURL = "https://example.com"; // Replace with your actual game URL
     const twitterURL = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(gameURL)}`;
     window.open(twitterURL, "_blank");
